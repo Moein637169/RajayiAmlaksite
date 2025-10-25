@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پنل مدیریت | مشاور املاک رجایی</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="bg-gray-100">
+    <!-- Admin Navbar -->
+    <nav class="fixed top-0 right-0 left-0 bg-gray-900 text-white shadow-md z-50">
+        <div class="flex justify-between items-center px-6 py-4">
+            <div class="flex items-center">
+                <i data-feather="shield" class="w-6 h-6 text-amber-500"></i>
+                <span class="mr-2 font-bold text-lg">پنل مدیریت</span>
+            </div>
+
+            <div class="flex items-center space-x-6">
+                <a href="/" class="text-sm hover:text-amber-400">
+                    <i data-feather="home" class="w-4 h-4 mr-1"></i>
+                    بازگشت به سایت
+                </a>
+                <button class="text-sm hover:text-amber-400 logout-btn">
+<i data-feather="log-out" class="w-4 h-4 mr-1"></i>
+                    خروج
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Admin Sidebar -->
+    <div class="fixed right-0 top-16 bottom-0 w-64 bg-white shadow-lg hidden lg:block">
+        <div class="p-4 border-b border-gray-200">
+            <div class="flex items-center space-x-4">
+                <div class="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center">
+                    <i data-feather="user" class="w-5 h-5 text-amber-600"></i>
+                </div>
+                <div>
+                            <h4 class="font-medium text-gray-800 admin-username">Admin</h4>
+<p class="text-xs text-gray-500">مدیر سیستم</p>
+                </div>
+            </div>
+        </div>
+
+        <nav class="p-4 space-y-1">
+                    <a href="admin-dashboard.html" class="flex items-center space-x-3 px-4 py-3 bg-amber-50 text-amber-700 rounded-lg">
+                        <i data-feather="home" class="w-5 h-5"></i>
+                        <span>داشبورد</span>
+                    </a>
+                    <a href="admin-properties.html" class="flex items-center space-x-3 px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg">
+                        <i data-feather="list" class="w-5 h-5"></i>
+                        <span>مدیریت املاک</span>
+                    </a>
+                    <a href="admin-gallery.html" class="flex items-center space-x-3 px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg">
+                        <i data-feather="image" class="w-5 h-5"></i>
+                        <span>گالری تصاویر</span>
+                    </a>
+                    <a href="admin-messages.html" class="flex items-center space-x-3 px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg">
+                        <i data-feather="mail" class="w-5 h-5"></i>
+                        <span>پیام‌ها</span>
+                    </a>
+                    <a href="admin-users.html" class="flex items-center space-x-3 px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg">
+                        <i data-feather="users" class="w-5 h-5"></i>
+                        <span>کاربران</span>
+                    </a>
+                    <a href="admin-settings.html" class="flex items-center space-x-3 px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg">
+                        <i data-feather="settings" class="w-5 h-5"></i>
+                        <span>تنظیمات</span>
+                    </a>
+</nav>
+    </div>
+
+    <!-- Admin Content -->
+    <main class="lg:mr-64 mt-16 p-6">
+        <div class="bg-white rounded-xl shadow-sm p-6">
+            <h1 class="text-2xl font-bold text-gray-800 mb-6">داشبورد مدیریت</h1>
+
+            <!-- Stats Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                <div class="bg-blue-50 rounded-xl p-6">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <p class="text-sm text-blue-800 mb-1">کل املاک</p>
+                            <h3 class="text-2xl font-bold text-blue-900">24</h3>
+                        </div>
+                        <div class="bg-blue-100 rounded-lg p-3">
+                            <i data-feather="home" class="w-5 h-5 text-blue-600"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-green-50 rounded-xl p-6">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <p class="text-sm text-green-800 mb-1">املاک ویژه</p>
+                            <h3 class="text-2xl font-bold text-green-900">8</h3>
+                        </div>
+                        <div class="bg-green-100 rounded-lg p-3">
+                            <i data-feather="star" class="w-5 h-5 text-green-600"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-amber-50 rounded-xl p-6">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <p class="text-sm text-amber-800 mb-1">درخواست بازدید</p>
+                            <h3 class="text-2xl font-bold text-amber-900">12</h3>
+                        </div>
+                        <div class="bg-amber-100 rounded-lg p-3">
+                            <i data-feather="eye" class="w-5 h-5 text-amber-600"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-purple-50 rounded-xl p-6">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <p class="text-sm text-purple-800 mb-1">پیام‌های جدید</p>
+                            <h3 class="text-2xl font-bold text-purple-900">5</h3>
+                        </div>
+                        <div class="bg-purple-100 rounded-lg p-3">
+                            <i data-feather="mail" class="w-5 h-5 text-purple-600"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Activities -->
+            <div class="mb-8">
+                <h2 class="text-xl font-bold text-gray-800 mb-4">فعالیت‌های اخیر</h2>
+                <div class="bg-gray-50 rounded-xl p-4">
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-blue-100 rounded-full p-2">
+                                <i data-feather="edit" class="w-4 h-4 text-blue-600"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm font-medium">ملک جدید "آپارتمان در شهرک کوثر — بلوک 7" اضافه شد</p>
+                                <p class="text-xs text-gray-500">2 ساعت پیش توسط MR_Rajayi</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-green-100 rounded-full p-2">
+                                <i data-feather="check" class="w-4 h-4 text-green-600"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm font-medium">درخواست بازدید برای ملک شماره 18 تایید شد</p>
+                                <p class="text-xs text-gray-500">دیروز توسط MR_Rajayi</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-amber-100 rounded-full p-2">
+                                <i data-feather="mail" class="w-4 h-4 text-amber-600"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm font-medium">پیام جدید از طرف علی محمدی دریافت شد</p>
+                                <p class="text-xs text-gray-500">دیروز</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div>
+                <h2 class="text-xl font-bold text-gray-800 mb-4">اقدامات سریع</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <a href="admin-add-property.html" class="bg-white border border-gray-200 rounded-xl p-4 flex flex-col items-center justify-center text-center hover:border-amber-400 hover:shadow-md transition duration-300">
+                        <div class="bg-blue-100 rounded-lg p-3 mb-2">
+                            <i data-feather="plus" class="w-5 h-5 text-blue-600"></i>
+                        </div>
+                        <p class="text-sm font-medium">افزودن ملک جدید</p>
+                    </a>
+
+                    <a href="admin-properties.html" class="bg-white border border-gray-200 rounded-xl p-4 flex flex-col items-center justify-center text-center hover:border-amber-400 hover:shadow-md transition duration-300">
+                        <div class="bg-green-100 rounded-lg p-3 mb-2">
+                            <i data-feather="edit" class="w-5 h-5 text-green-600"></i>
+                        </div>
+                        <p class="text-sm font-medium">ویرایش ملک‌ها</p>
+                    </a>
+
+                    <a href="admin-gallery.html" class="bg-white border border-gray-200 rounded-xl p-4 flex flex-col items-center justify-center text-center hover:border-amber-400 hover:shadow-md transition duration-300">
+                        <div class="bg-purple-100 rounded-lg p-3 mb-2">
+                            <i data-feather="image" class="w-5 h-5 text-purple-600"></i>
+                        </div>
+                        <p class="text-sm font-medium">مدیریت تصاویر</p>
+                    </a>
+
+                    <a href="admin-settings.html" class="bg-white border border-gray-200 rounded-xl p-4 flex flex-col items-center justify-center text-center hover:border-amber-400 hover:shadow-md transition duration-300">
+                        <div class="bg-amber-100 rounded-lg p-3 mb-2">
+                            <i data-feather="settings" class="w-5 h-5 text-amber-600"></i>
+                        </div>
+                        <p class="text-sm font-medium">تنظیمات سایت</p>
+                    </a>
+</div>
+            </div>
+        </div>
+    </main>
+    <script>
+        feather.replace();
+        // Check if user is logged in
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check URL params first
+            const urlParams = new URLSearchParams(window.location.search);
+            const loggedIn = urlParams.get('loggedIn');
+
+            if (loggedIn === 'true') {
+                localStorage.setItem('adminLoggedIn', 'true');
+                localStorage.setItem('adminUsername', 'Admin');
+            }
+
+            const isLoggedIn = localStorage.getItem('adminLoggedIn') === 'true';
+
+            if (!isLoggedIn) {
+                alert('لطفاً ابتدا وارد سیستم شوید');
+                window.location.href = 'admin-login.html';
+                return;
+            }
+
+            // Display username in sidebar
+            const username = localStorage.getItem('adminUsername') || 'Admin';
+            document.querySelector('.admin-username').textContent = username;
+
+            // Logout functionality
+            document.querySelector('.logout-btn').addEventListener('click', function() {
+                localStorage.removeItem('adminLoggedIn');
+                localStorage.removeItem('adminUsername');
+                window.location.href = 'admin-login.html';
+            });
+
+            // Mark active menu item
+            const currentPage = window.location.pathname.split('/').pop();
+            const menuItems = document.querySelectorAll('nav a');
+
+            menuItems.forEach(item => {
+                if (item.getAttribute('href') === currentPage) {
+                    item.classList.add('bg-amber-50', 'text-amber-700');
+                } else {
+                    item.classList.remove('bg-amber-50', 'text-amber-700');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
