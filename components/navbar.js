@@ -104,18 +104,18 @@ class CustomNavbar extends HTMLElement {
         }
       </style>
       <nav>
-        <a href="/" class="logo">
+        <a href="./" class="logo">
           مشاور املاک رجایی
           <i data-feather="home"></i>
         </a>
         
         <ul class="nav-links">
-          <li><a href="/" class="active">خانه</a></li>
-          <li><a href="/properties.html">املاک</a></li>
-          <li><a href="/about.html">درباره ما</a></li>
-          <li><a href="/blog.html">وبلاگ</a></li>
-          <li><a href="/contact.html">تماس</a></li>
-          <li><a href="/admin-login.html" class="contact-btn">ورود ادمین</a></li>
+          <li><a href="./" class="active">خانه</a></li>
+          <li><a href="./properties.html">املاک</a></li>
+          <li><a href="./about.html">درباره ما</a></li>
+          <li><a href="./blog.html">وبلاگ</a></li>
+          <li><a href="./contact.html">تماس</a></li>
+          <li><a href="./admin-login.html" class="contact-btn">ورود ادمین</a></li>
         </ul>
         
         <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
@@ -124,14 +124,20 @@ class CustomNavbar extends HTMLElement {
       </nav>
       
       <div id="mobile-menu" class="mobile-menu hidden">
-        <a href="/">خانه</a>
-        <a href="/properties.html">املاک</a>
-        <a href="/about.html">درباره ما</a>
-        <a href="/blog.html">وبلاگ</a>
-        <a href="/contact.html">تماس</a>
-        <a href="/admin-login.html" class="block mt-4 text-amber-400">ورود ادمین</a>
+        <a href="./">خانه</a>
+        <a href="./properties.html">املاک</a>
+        <a href="./about.html">درباره ما</a>
+        <a href="./blog.html">وبلاگ</a>
+        <a href="./contact.html">تماس</a>
+        <a href="./admin-login.html" class="block mt-4 text-amber-400">ورود ادمین</a>
       </div>
     `;
   }
 }
 customElements.define('custom-navbar', CustomNavbar);
+
+// تابع منوی موبایل (بیرون از کلاس)
+function toggleMobileMenu() {
+  const menu = document.querySelector('custom-navbar').shadowRoot.getElementById('mobile-menu');
+  menu.classList.toggle('active');
+}
